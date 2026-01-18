@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Font -->
@@ -48,16 +50,16 @@
       <p>
         In ICT, I continuously work on developing myself to better understand
         systems and technologies. When facing a problem, I always search for
-        the core issue — I see it as a puzzle I want to solve.
+        the core issue. I see it as a puzzle I want to solve.
       </p>
       <p style="margin-top:15px">
         Outside of IT, I play piano improvisationally and enjoy learning new languages.
       </p>
 
       <h3 style="margin-top:25px">Technical skills</h3>
-      <div class="skill">Python<div class="bar"><span data-width="75%"></span></div></div>
+      <div class="skill">Python<div class="bar"><span data-width="65%"></span></div></div>
       <div class="skill">Bash / Linux<div class="bar"><span data-width="60%"></span></div></div>
-      <div class="skill">HTML & CSS<div class="bar"><span data-width="70%"></span></div></div>
+      <div class="skill">HTML & CSS<div class="bar"><span data-width="55%"></span></div></div>
       <div class="skill">JavaScript<div class="bar"><span data-width="40%"></span></div></div>
       <div class="skill">Kotlin<div class="bar"><span data-width="30%"></span></div></div>
     </div>
@@ -113,7 +115,7 @@
   const reveals = document.querySelectorAll('.reveal');
   const skills = document.querySelectorAll('.bar span');
 
-  window.addEventListener('scroll', () => {
+  function revealElements() {
     reveals.forEach(el => {
       const top = el.getBoundingClientRect().top;
       if (top < window.innerHeight - 100) el.classList.add('active');
@@ -124,8 +126,15 @@
       if (top < window.innerHeight - 100)
         bar.style.width = bar.dataset.width;
     });
-  });
+  }
+
+  // Run on scroll
+  window.addEventListener('scroll', revealElements);
+
+  // Run once on page load
+  window.addEventListener('load', revealElements);
 </script>
+
 
 </body>
 </html>
