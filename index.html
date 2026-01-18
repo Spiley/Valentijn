@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentijn Keijser – Cyber Security</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <strong>Valentijn</strong>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-text reveal">
+    <h1>Valentijn <span>Keijser</span></h1>
+    <p>
+      HBO-ICT Cyber Security student focused on understanding systems,
+      finding vulnerabilities, and solving complex technical problems.
+    </p>
+    <a class="btn" href="#experience">View experience</a>
+  </div>
+  <div class="hero-img reveal">
+    <img src="assets/img/profile.jpg" alt="Valentijn Keijser">
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="reveal">About me</h2>
+  <div class="about-grid">
+    <div class="about-img reveal">
+      <img src="assets/img/about.jpg" alt="About Valentijn">
+    </div>
+    <div class="card reveal">
+      <p>
+        In ICT, I continuously work on developing myself to better understand
+        systems and technologies. When facing a problem, I always search for
+        the core issue — I see it as a puzzle I want to solve.
+      </p>
+      <p style="margin-top:15px">
+        Outside of IT, I play piano improvisationally and enjoy learning new languages.
+      </p>
+
+      <h3 style="margin-top:25px">Technical skills</h3>
+      <div class="skill">Python<div class="bar"><span data-width="75%"></span></div></div>
+      <div class="skill">Bash / Linux<div class="bar"><span data-width="60%"></span></div></div>
+      <div class="skill">HTML & CSS<div class="bar"><span data-width="70%"></span></div></div>
+      <div class="skill">JavaScript<div class="bar"><span data-width="40%"></span></div></div>
+      <div class="skill">Kotlin<div class="bar"><span data-width="30%"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="reveal">Education & Experience</h2>
+
+  <div class="grid">
+    <div class="card reveal">
+      <h3>Education</h3>
+      <ul class="list">
+        <li><b>HBO-ICT Cyber Security</b><br>Hogeschool van Amsterdam (2020 – present)</li>
+        <li>HAVO – Petrus Canisius College Alkmaar</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3>Work experience</h3>
+      <ul class="list">
+        <li><b>Servicemedewerker</b> – Vue Alkmaar (2024 – present)</li>
+        <li><b>Backend Developer (Intern)</b> – Kabood.io<br>Django & Python</li>
+        <li><b>ICT Support</b> – Fiksi (2022 – 2023)</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3>Certificates</h3>
+      <ul class="list">
+        <li>CISCO Ethical Hacker (2024)</li>
+        <li>Propedeuse HBO-ICT (2021)</li>
+        <li>Anglia English Certificate (2018)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="reveal">Contact</h2>
+  <div class="grid">
+    <div class="card reveal">📧 valentijnkeijser@gmail.com</div>
+    <div class="card reveal">📍 Alkmaar, Noord-Holland</div>
+    <div class="card reveal">💼 linkedin.com/in/valentijnkeijser</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Valentijn Keijser · Cyber Security
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const skills = document.querySelectorAll('.bar span');
+
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) el.classList.add('active');
+    });
+
+    skills.forEach(bar => {
+      const top = bar.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100)
+        bar.style.width = bar.dataset.width;
+    });
+  });
+</script>
+
+</body>
+</html>
