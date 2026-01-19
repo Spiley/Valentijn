@@ -208,21 +208,6 @@ nav .logo {
       box-shadow: 0 20px 40px rgba(0,0,0,0.45);
     }
 
-    /* #portfolio {
-      padding: 80px 20px;
-    }
-
-    #portfolio h2 {
-      text-align: center;
-      margin-bottom: 50px;
-    } */
-
-    #projects .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
-    }
-
     #projects .card img {
       width: 80%;
       height: 180px;
