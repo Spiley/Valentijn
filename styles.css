@@ -47,28 +47,110 @@
 
     a { color: var(--accent); text-decoration: none; }
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(11,15,20,0.75);
-      backdrop-filter: blur(10px);
-      padding: 15px 10%;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-    }
+/* ================= NAVBAR ================= */
 
-    nav ul {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
+/* Main nav */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11,15,20,0.75);
+  backdrop-filter: blur(10px);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
 
-    nav a { color: var(--text); }
-    nav a:hover { color: var(--accent); }
+/* Nav links desktop */
+nav ul.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links */
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Logo / brand */
+nav .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ================= HAMBURGER BUTTON ================= */
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  background: transparent; /* match navbar */
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--accent-glow);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.nav-toggle i {
+  pointer-events: none; /* only button clickable */
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  /* Show hamburger button */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Hide nav links by default, vertical dropdown */
+  nav ul.nav-links {
+    position: absolute;
+    top: 70px; /* below navbar */
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    width: auto;
+    padding: 15px 10px;
+    border-radius: 0 0 8px 8px;
+    display: none; /* hidden by default */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 99;
+  }
+
+  nav ul.nav-links li {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* Show nav when toggled */
+  nav ul.nav-links.show {
+    display: flex;
+  }
+}
+
 
     /* HERO */
     #hero {

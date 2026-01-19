@@ -17,14 +17,21 @@
 <body>
 
 <nav>
-  <ul>
-    <li><a href="#hero"><b>Valentijn</b></a></li>
+  <a href="#hero" class="logo"><b>Valentijn</b></a>
+
+  <!-- Hamburger button -->
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">projects</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
 
 <section id="hero">
   <div class="hero-text reveal">
@@ -187,6 +194,16 @@
   // Run once on page load
   window.addEventListener('load', revealElements);
 </script>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 
 
 </body>
