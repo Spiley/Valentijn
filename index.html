@@ -2,229 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentijn Keijser – Cyber Security</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Icons -->
+  <meta name="theme-color" content="#0b1420">
+  <meta name="description" content="Valentijn Keijser — Cyber Security bachelor's graduate, agentic AI pentest platform builder, and independent Android app and game developer behind Spiley.">
+  <title>Valentijn Keijser — Cyber Security & Development</title>
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;650;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="spark" viewBox="0 0 40 40"><path d="m20 0 4 14 12-8-8 12 12 2-14 4 8 12-12-8-2 12-4-14-12 8 8-12-12-2 14-4-8-12 12 8Z"/></symbol>
+  </svg>
 
-<nav>
-  <a href="#hero" class="logo"><b>Valentijn</b></a>
+  <header class="site-header">
+    <nav class="wrap navigation" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="Valentijn Keijser home"><span class="brand-mark">vk<span>.</span></span><span>Valentijn Keijser</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-contact" href="#contact">Let’s talk <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div>
+    </nav>
+  </header>
 
-  <!-- Hamburger button -->
-  <button class="nav-toggle" aria-label="Toggle navigation">
-    <i class="bi bi-list"></i>
-  </button>
+  <main id="main">
+    <section class="hero wrap" id="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> CYBER SECURITY / APPS & GAMES</p>
+        <h1 id="hero-title"><span class="hero-greeting">Hi, I’m</span>Valentijn<br><em>Keijser.</em></h1>
+        <p class="hero-role">Cyber Security graduate.<br>Independent app & game developer.</p>
+        <p class="hero-description">I turn curiosity into things that work: agentic AI tools, useful Android apps, and games worth getting lost in.</p>
+        <div class="hero-actions"><a class="button" href="#projects">Explore my work <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="text-link" href="#experience">My experience <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div>
+      </div>
+      <div class="hero-portraits">
+        <div class="portrait-collage">
+          <div class="portrait-main"><img src="assets/img/about.jpg" alt="Valentijn Keijser standing and smiling in a suit" width="696" height="930" fetchpriority="high"></div>
+          <svg class="portrait-accent" aria-hidden="true"><use href="#spark"/></svg>
+        </div>
+        <div class="portrait-caption"><span class="status-dot"></span> A CURIOUS MIND, BASED IN ALKMAAR.</div>
+      </div>
+    </section>
 
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <div class="focus-strip"><div class="wrap"><span>SECURITY MEETS CREATIVITY</span><span><span class="strip-spark" aria-hidden="true">✳</span> Agentic AI</span><span><span class="strip-spark" aria-hidden="true">✳</span> Cyber Security</span><span><span class="strip-spark" aria-hidden="true">✳</span> Apps & games</span></div></div>
 
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">Ideas, made real<span class="accent">.</span></h2></div><p>From understanding vulnerabilities<br>to creating something you can play.</p></div>
+      <div class="project-toolbar"><div class="filters" role="group" aria-label="Filter projects"><button class="filter active" type="button" data-filter="all" aria-pressed="true">All work <span>09</span></button><button class="filter" type="button" data-filter="security" aria-pressed="false">Security <span>03</span></button><button class="filter" type="button" data-filter="android" aria-pressed="false">Apps & games <span>03</span></button><button class="filter" type="button" data-filter="other" aria-pressed="false">More projects <span>03</span></button></div><a class="text-link github-link" href="https://github.com/Spiley" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="project-grid">
+        <article class="project-card featured-project" data-category="security">
+          <div class="featured-copy"><p class="eyebrow"><span class="status-dot"></span> FEATURED / CYBER SECURITY</p><h3>Agentic AI<br>Pentest Platform</h3><p>A multi-agent platform built for nSec / Resillience. From intake and reconnaissance to vulnerability analysis, AI agents coordinate the penetration testing workflow.</p><div class="tags"><span>Python / FastAPI</span><span>Docker</span><span>Local LLMs</span></div><a class="button button-outline" href="pentest-tool.html">Explore the project <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a><p class="project-period">FEBRUARY — JULY 2026</p></div>
+          <a class="featured-visual" href="pentest-tool.html" aria-label="Read about the Agentic AI Pentest Platform"><div class="preview-bar"><span></span><span></span><span></span><p>nSec / vulnerability dashboard</p></div><img src="assets/img/nsecdashboard.png" alt="nSec pentest platform dashboard showing findings, risk levels, and AI agent results" width="2048" height="887" loading="lazy"><div class="visual-footer"><span>INTAKE → RECON → ANALYSIS → REPORT</span><svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></div></a>
+        </article>
 
-<section id="hero">
-  <div class="hero-text reveal">
-    <h1>Valentijn <span>Keijser</span></h1>
-    <h3>Cyber <span>Security</span></h3>
-    <p>
-      HBO-ICT Cyber Security professional focused on understanding systems,
-      finding vulnerabilities, and solving complex technical problems.
-    </p>
-    <a class="btn" href="#experience">View experience</a>
-  </div>
-  <div class="hero-img reveal">
-    <img src="assets/img/profile.jpg" alt="Valentijn Keijser">
-  </div>
-</section>
+        <article class="project-card app-project" data-category="android">
+          <a class="app-visual watch-visual" href="spileyapps/#watchworld" aria-label="Explore WatchWorld on SpileyApps"><div class="visual-copy"><p class="eyebrow">STREAMING, SIMPLIFIED</p><h3>Find your<br>next watch.</h3><span>WatchWorld / Android</span></div><div class="phone"><img src="spileyapps/assets/watchworld-screen-2.webp" alt="WatchWorld app showing streaming availability for Avengers: Endgame" width="800" height="1743" loading="lazy"></div><span class="visual-index" aria-hidden="true">01</span></a>
+          <div class="project-info"><div class="project-title"><img src="spileyapps/assets/watchworld-icon.webp" alt="" width="48" height="48" loading="lazy"><div><h3>WatchWorld</h3><p class="eyebrow">ANDROID / ENTERTAINMENT</p></div><a class="circle-link" href="https://play.google.com/store/apps/details?id=com.WatchWorld" target="_blank" rel="noopener noreferrer" aria-label="Get WatchWorld on Google Play"><svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div><p>Discover where movies and shows are streaming, and find the right region for your next movie night.</p><div class="project-links"><a href="spileyapps/#watchworld">View on SpileyApps <span aria-hidden="true">↗</span></a><span>Android app</span></div></div>
+        </article>
+        <article class="project-card app-project" data-category="android">
+          <a class="app-visual booze-visual" href="spileyapps/#exploding-booze" aria-label="Explore Exploding Booze on SpileyApps"><div class="visual-copy"><p class="eyebrow">ONE PHONE. ALL YOUR FRIENDS.</p><h3>Pass it.<br>Beat the clock.</h3><span>Exploding Booze / Android</span></div><div class="phone"><img src="spileyapps/assets/exploding-booze-screen-2.webp" alt="Exploding Booze party game with quizzes and challenges" width="800" height="1743" loading="lazy"></div><span class="visual-index" aria-hidden="true">02</span></a>
+          <div class="project-info"><div class="project-title"><img src="spileyapps/assets/exploding-booze-icon.webp" alt="" width="48" height="48" loading="lazy"><div><h3>Exploding Booze</h3><p class="eyebrow">ANDROID / PARTY GAME</p></div><a class="circle-link" href="https://play.google.com/store/apps/details?id=com.explodingbooze" target="_blank" rel="noopener noreferrer" aria-label="Get Exploding Booze on Google Play"><svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div><p>Pass the phone, take on challenges, and beat the timer in a party game built to play together.</p><div class="project-links"><a href="spileyapps/#exploding-booze">View on SpileyApps <span aria-hidden="true">↗</span></a><span>Android game</span></div></div>
+        </article>
+        <article class="project-card app-project" data-category="android">
+          <a class="app-visual maze-visual" href="spileyapps/#mazebound" aria-label="Explore Mazebound on SpileyApps"><div class="visual-copy"><p class="eyebrow">YOUR MAZE. YOUR STRATEGY.</p><h3>Build. Adapt. Defend.</h3></div><div class="landscape-preview"><img src="spileyapps/assets/mazebound-screen-3.webp" alt="Mazebound tower defense gameplay with a custom maze and tower upgrades" width="800" height="367" loading="lazy"></div><span class="visual-index" aria-hidden="true">03</span></a>
+          <div class="project-info"><div class="project-title"><img src="spileyapps/assets/mazebound-icon.webp" alt="" width="48" height="48" loading="lazy"><div><h3>Mazebound: Simple TD</h3><p class="eyebrow">ANDROID / TOWER DEFENSE</p></div><a class="circle-link" href="https://play.google.com/store/apps/details?id=nl.valentijnkeijser.towerdefense" target="_blank" rel="noopener noreferrer" aria-label="Get Mazebound on Google Play"><svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div><p>Build your own maze, upgrade your towers, and outlast a Hive that adapts to your defenses.</p><div class="project-links"><a href="spileyapps/#mazebound">View on SpileyApps <span aria-hidden="true">↗</span></a><span>Android game</span></div></div>
+        </article>
 
-<section id="about">
-  <h2 class="reveal">About me</h2>
-  <div class="about-grid">
-    <div class="about-img reveal">
-      <img src="assets/img/about.jpg" alt="About Valentijn">
-    </div>
-    <div class="card reveal">
-      <p>
-        In IT, I continuously work on developing myself to better understand
-        systems and technologies. When facing a problem, I always search for
-        the core issue. I see it as a puzzle I want to solve.
-      </p>
-      <p style="margin-top:15px">
-        Outside of IT, I play piano improvisationally and enjoy learning new languages.
-      </p>
+        <article class="project-card compact-project" data-category="security"><a class="compact-visual" href="https://github.com/Spiley/MFA-New" target="_blank" rel="noopener noreferrer" aria-label="View Multi-factor Authentication on GitHub"><img src="assets/img/MFA.png" alt="Python multi-factor authentication tool" loading="lazy"></a><div class="project-info"><p class="eyebrow">SECURITY / PYTHON</p><h3>Multi-factor Authentication</h3><p>A Python tool exploring an extra layer of protection for account access.</p><a class="text-link" href="https://github.com/Spiley/MFA-New" target="_blank" rel="noopener noreferrer">View source <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+        <article class="project-card compact-project" data-category="security"><a class="compact-visual" href="https://github.com/Spiley/ThreatHunter" target="_blank" rel="noopener noreferrer" aria-label="View AI Vulnerability Scanner on GitHub"><img src="assets/img/openvas.png" alt="OpenVAS vulnerability scanner interface" loading="lazy"></a><div class="project-info"><p class="eyebrow">SECURITY / OPENVAS</p><h3>AI Vulnerability Scanner</h3><p>A vulnerability scanning project running OpenVAS on a Raspberry Pi.</p><a class="text-link" href="https://github.com/Spiley/ThreatHunter" target="_blank" rel="noopener noreferrer">View source <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+        <article class="project-card compact-project" data-category="other"><a class="compact-visual" href="https://spiley.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the WatchWorld website"><img src="assets/img/watchworld.png" alt="WatchWorld movie and streaming discovery website" loading="lazy"></a><div class="project-info"><p class="eyebrow">WEB / DJANGO</p><h3>WatchWorld Web</h3><p>The original streaming discovery website, built to explore Django and Python.</p><div class="inline-links"><a class="text-link" href="https://spiley.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Visit website <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a><a class="text-link" href="https://github.com/Spiley/WatchWorld-Android" target="_blank" rel="noopener noreferrer">Android source <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></div></article>
+        <article class="project-card compact-project" data-category="other"><a class="compact-visual" href="https://github.com/Spiley/Video-compressor" target="_blank" rel="noopener noreferrer" aria-label="View Video Compressor on GitHub"><img src="assets/img/compri.png" alt="Video compression tool interface" loading="lazy"></a><div class="project-info"><p class="eyebrow">UTILITY / EXPERIMENT</p><h3>Video Compressor</h3><p>A free video compression tool, made as an experiment in AI-assisted development.</p><a class="text-link" href="https://github.com/Spiley/Video-compressor" target="_blank" rel="noopener noreferrer">View source <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+        <article class="project-card compact-project music-project" data-category="other"><a class="compact-visual" href="https://spiley.github.io/HKU/" target="_blank" rel="noopener noreferrer" aria-label="Explore the music EP process"><img src="assets/img/EP.png" alt="Music EP project artwork" loading="lazy"></a><div class="project-info"><p class="eyebrow">MUSIC / CREATIVE WORK</p><h3>An independent EP</h3><p>A music project released on music stores. Another way to turn an idea into something real.</p><a class="text-link" href="https://spiley.github.io/HKU/" target="_blank" rel="noopener noreferrer">Explore the process <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+      </div>
+      <div class="studio-link"><span>More of the app side of things?</span><a class="text-link" href="spileyapps/">Step into SpileyApps <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
+    </section>
 
-      <h3 style="margin-top:25px">Technical skills</h3>
-      <div class="skill">Python<div class="bar"><span data-width="65%"></span></div></div>
-      <div class="skill">Bash / Linux<div class="bar"><span data-width="60%"></span></div></div>
-      <div class="skill">HTML & CSS<div class="bar"><span data-width="55%"></span></div></div>
-      <div class="skill">Nmap, Wireshark<div class="bar"><span data-width="50%"></span></div></div>
-      <div class="skill">MySQL<div class="bar"><span data-width="45%"></span></div></div>
-      <div class="skill">pfSense, WAFs<div class="bar"><span data-width="40%"></span></div></div>
-      <div class="skill">Snort<div class="bar"><span data-width="35%"></span></div></div>
-      <div class="skill">Docker<div class="bar"><span data-width="35%"></span></div></div>
-      <div class="skill">Volatility 3<div class="bar"><span data-width="30%"></span></div></div>
-      <div class="skill">Kotlin<div class="bar"><span data-width="30%"></span></div></div>
-    </div>
-  </div>
-</section>
+    <section class="about-section" id="about" aria-labelledby="about-title"><div class="wrap about-grid">
+      <div>
+        <div class="about-person"><img src="assets/img/profile.jpg" alt="Headshot of Valentijn Keijser" width="1018" height="1018" loading="lazy"><div><p class="eyebrow">THE PERSON BEHIND THE PROJECTS</p><p>Valentijn Keijser<span>Security mindset. Developer’s curiosity.</span></p></div></div>
+        <p class="eyebrow">02 / ABOUT ME</p><h2 id="about-title">A curious mind.<br>A hands-on approach<span class="accent">.</span></h2><p class="about-lead">I like figuring out how things work.<br>Then figuring out how to make them better.</p><p>With a bachelor’s degree in HBO-ICT Cyber Security, I approach systems with a security mindset and a developer’s curiosity. Whether I’m investigating a vulnerability or building an app, I look for the core of the problem and work outward from there.</p><p>Outside of IT, I play piano improvisationally and enjoy learning new languages. That same curiosity finds its way into everything I make.</p><div class="degree-note"><span class="degree-symbol" aria-hidden="true">↗</span><div><strong>Bachelor’s degree · HBO-ICT Cyber Security</strong><span>Hogeschool van Amsterdam</span></div></div>
+      </div>
+      <div class="skills-panel"><div class="panel-heading"><p class="eyebrow">MY TOOLKIT</p><span aria-hidden="true">&lt;/&gt;</span></div><div class="skill-group"><h3>Building & development</h3><div class="tags"><span>Python</span><span>Kotlin</span><span>Django</span><span>FastAPI</span><span>HTML & CSS</span><span>MySQL</span></div></div><div class="skill-group"><h3>Security & analysis</h3><div class="tags"><span>Nmap</span><span>Wireshark</span><span>OpenVAS</span><span>Snort</span><span>Volatility 3</span><span>pfSense / WAFs</span></div></div><div class="skill-group"><h3>Infrastructure & AI</h3><div class="tags"><span>Bash / Linux</span><span>Docker</span><span>AI agents</span><span>Local LLMs / Ollama</span></div></div><p class="toolkit-note"><span class="status-dot"></span> Always adding something new.</p></div>
+    </div></section>
 
-<section id="projects">
-  <h2 class="reveal">Projects</h2>
-  <div class="grid">
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / EXPERIENCE & EDUCATION</p><h2 id="experience-title">The path so far<span class="accent">.</span></h2></div><p>Learning by doing.<br>Building along the way.</p></div>
+      <div class="experience-grid"><div class="work-timeline"><h3 class="column-title">Work experience</h3>
+        <article class="timeline-item highlighted"><div class="timeline-meta"><span>JULY 2026 — PRESENT</span><span class="timeline-dot"></span></div><div><p class="company"><a href="spileyapps/">SpileyApps <span aria-hidden="true">↗</span></a></p><h4>Independent app & game developer</h4><p>Designing, developing, and publishing Android apps and games, from streaming discovery and local travel to party games and tower defense.</p><a class="text-link" href="spileyapps/">Explore SpileyApps <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>FEB 2026 — JUL 2026</span><span class="timeline-dot"></span></div><div><p class="company">nSec / Resillience</p><h4>Agentic AI pentest platform developer</h4><p>Built an agentic AI penetration testing platform, integrating multi-agent workflows, local language models, and security tools to automate reconnaissance and vulnerability analysis.</p><a class="text-link" href="pentest-tool.html">See what I built <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2024 — 2026</span><span class="timeline-dot"></span></div><div><p class="company">Vue Alkmaar</p><h4>Service</h4><p>Hospitality and customer service.</p></div></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2023</span><span class="timeline-dot"></span></div><div><p class="company">Kabood.io</p><h4>Backend Developer · Internship</h4><p>Backend development with Django and Python.</p></div></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2022 — 2023</span><span class="timeline-dot"></span></div><div><p class="company">Fiksi</p><h4>IT Support</h4><p>IT support and work with HTML and CSS.</p></div></article>
+        <details class="earlier-experience"><summary>Earlier experience <span aria-hidden="true">+</span></summary><div><p><strong>Warehouse Worker · Norah</strong><span>2022 — 2023</span></p><p><strong>Kitchen Staff · Pizza Service</strong><span>2019 — 2022</span></p></div></details>
+      </div><aside class="education-column"><h3 class="column-title">Education & certificates</h3><div class="education-card"><p class="eyebrow"><span class="status-dot"></span> BACHELOR’S DEGREE</p><h4>HBO-ICT<br>Cyber Security</h4><p>Hogeschool van Amsterdam</p><span class="credential">Degree completed</span></div><div class="education-entry"><p class="eyebrow">2015 — 2020</p><h4>HAVO</h4><p>Petrus Canisius College, Alkmaar</p></div><div class="certificates"><h4>Certificates</h4><ul><li><span>Cisco Ethical Hacker course</span><span>2024</span></li><li><span>Propedeuse HBO-ICT</span><span>2021</span></li><li><span>HAVO diploma</span><span>2020</span></li><li><span>Anglia English Certificate</span><span>2018</span></li></ul></div></aside></div>
+    </section>
 
-    <div class="card reveal">
-      <img src="assets/img/hoofd.png" alt="AI Pentest Tool Screenshot">
-      <h3>AI Pentester</h3>
-      <p>An Work-in-Progress multi-agent security tool that leverages AI for smart recon, automated triage, and vulnerability analysis.</p>
-      <a href="pentest-tool.html" class="btn">Read more</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/watchworld.png" alt="Project 1 Screenshot">
-      <h3>Watchworld</h3>
-      <p>A website to find on what streamingservice you can watch a movie or show made in the django framework to get better with the framework.</p>
-      <a href="https://spiley.pythonanywhere.com/" target="_blank" class="btn">View website</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/MFA.png" alt="Project 2 Screenshot">
-      <h3>Multi-factor Authentication</h3>
-      <p>A multifactor authentication tool buildt in Python</p>
-      <a href="https://github.com/Spiley/MFA-New" target="_blank" class="btn">View git</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/openvas.png" alt="Project 1 Screenshot">
-      <h3>AI Vulnerability Scanner</h3>
-      <p>A Vulnerability scanner using OpenVAS on a Raspberry PI</p>
-      <a href="https://github.com/Spiley/ThreatHunter" target="_blank" class="btn">View git</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/compri.png" alt="Project 3 Screenshot">
-      <h3>Video-compressor</h3>
-      <p>A Video-compressor that is free to use (Vibe coding)</p>
-      <a href="https://github.com/Spiley/Video-compressor" target="_blank" class="btn">View git</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/androidwatch.png" alt="Project 4 Screenshot">
-      <h3>Android App</h3>
-      <p>WatchWorld as an android app</p>
-      <a href="https://github.com/Spiley/WatchWorld-Android" target="_blank" class="btn">View git</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/Git.png" alt="Project 6 Screenshot">
-      <h3>Github</h3>
-      <p>My github page</p>
-      <a href="https://github.com/Spiley" target="_blank" class="btn">View git</a>
-    </div>
-
-    <div class="card reveal">
-      <img src="assets/img/EP.png" alt="Project 5 Screenshot">
-      <h3>EP</h3>
-      <p>An EP that was uploaded to all music stores</p>
-      <a href="https://spiley.github.io/HKU/" target="_blank" class="btn">View process</a>
-    </div>
-
-  </div>
-</section>
-
-<section id="experience">
-  <h2 class="reveal">Education & Experience</h2>
-
-  <div class="grid">
-    <div class="card reveal">
-      <h3>Education</h3>
-      <ul class="list">
-        <li><b>HBO-ICT Cyber Security</b><br>Hogeschool van Amsterdam (2020 – present)</li>
-        <li>HAVO – Petrus Canisius College Alkmaar (2015 - 2020)</li>
-      </ul>
-    </div>
-
-    <div class="card reveal">
-      <h3>Work experience</h3>
-      <ul class="list">
-        <li><b>Service</b> – Vue Alkmaar (2024 – 2026)<br>Hospitality</li>
-        <li><b>Backend Developer (Intern)</b> – Kabood.io (2023)<br>Django & Python</li>
-        <li><b>IT Support</b> – Fiksi (2022 – 2023)<br>HTML/CSS</li>
-        <li><b>Warehouse Worker</b> – Norah (2022 – 2023)</li>
-        <li><b>Kitchen Staff</b> – Pizza Service (2019 – 2022)</li>
-      </ul>
-    </div>
-
-    <div class="card reveal">
-      <h3>Certificates</h3>
-      <ul class="list">
-        <li>CISCO "Ethical Hacker" Course (2024)</li>
-        <li>Propedeuse HBO-ICT (2021)</li>
-        <li>HAVO (2020)</li>
-        <li>Anglia English Certificate (2018)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 class="reveal">Contact</h2>
-  <div class="grid">
-    <div class="card reveal">📧 info@valentijnkeijser.nl</div>
-    <div class="card reveal">📍 Alkmaar, Noord-Holland</div>
-    <a href="https://www.linkedin.com/in/valentijnkeijser" target="_blank" style="color: white;"><div class="card reveal">💼 linkedin</div></a></div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Valentijn Keijser · Cyber Security
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const skills = document.querySelectorAll('.bar span');
-
-  function revealElements() {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) el.classList.add('active');
-    });
-
-    skills.forEach(bar => {
-      const top = bar.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100)
-        bar.style.width = bar.dataset.width;
-    });
-  }
-
-  // Run on scroll
-  window.addEventListener('scroll', revealElements);
-
-  // Run once on page load
-  window.addEventListener('load', revealElements);
-</script>
-
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
-
-
-
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap"><div class="contact-top"><div><p class="eyebrow">04 / LET’S CONNECT</p><h2 id="contact-title">Something in mind?<br><em>Let’s talk.</em></h2></div><svg class="contact-spark" aria-hidden="true"><use href="#spark"/></svg></div><a class="contact-email" href="mailto:info@valentijnkeijser.nl">info@valentijnkeijser.nl <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a><div class="contact-bottom"><p>Alkmaar, Noord-Holland · Netherlands</p><div><a class="text-link" href="https://www.linkedin.com/in/valentijnkeijser" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a><a class="text-link" href="https://github.com/Spiley" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a><a class="text-link" href="spileyapps/">SpileyApps <svg class="icon" aria-hidden="true"><use href="#up-right"/></svg></a></div></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="#hero"><span class="brand-mark">vk<span>.</span></span><span>Valentijn Keijser</span></a><p>© <span id="year">2026</span> · Built with curiosity.</p><a class="text-link" href="#hero">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
-
