@@ -1,60 +1,47 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('#nav-links');
+const filters = document.querySelectorAll('.filter');
+const projects = [...document.querySelectorAll('.project-card')];
+const status = document.querySelector('#filter-status');
 
-function closeNavigation() {
-  navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.setAttribute('aria-label', 'Open navigation');
-  navLinks.classList.remove('open');
+for (const filter of filters) {
+  const category = filter.dataset.filter;
+  const matches = projects.filter(project => category === 'all' || project.dataset.category === category);
+  filter.querySelector('span').textContent = String(matches.length).padStart(2, '0');
+  filter.addEventListener('click', () => {
+    for (const button of filters) {
+      const active = button === filter;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    }
+    for (const project of projects) {
+      project.hidden = category !== 'all' && project.dataset.category !== category;
+    }
+    status.textContent = 'Showing ' + matches.length + ' projects.';
+  });
 }
 
-navToggle.addEventListener('click', () => {
-  const open = navToggle.getAttribute('aria-expanded') !== 'true';
-  navToggle.setAttribute('aria-expanded', String(open));
-  navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-  navLinks.classList.toggle('open', open);
-});
-
-navLinks.addEventListener('click', (event) => {
-  if (event.target.closest('a')) closeNavigation();
-});
-
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.navigation')) closeNavigation();
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
-    closeNavigation();
-    navToggle.focus();
+const navigation = [...document.querySelectorAll('.section-navigation a')];
+const sections = navigation.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+const updateNavigation = () => {
+  const threshold = Math.min(window.innerHeight * 0.35, 240);
+  const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+  const current = atBottom ? sections.at(-1) : sections.filter(section => section.getBoundingClientRect().top <= threshold).at(-1) || sections[0];
+  for (const link of navigation) {
+    if (link.getAttribute('href') === '#' + current.id) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   }
-});
-
-const mobileNavigation = window.matchMedia('(max-width: 600px)');
-mobileNavigation.addEventListener('change', closeNavigation);
-
-const filters = document.querySelectorAll('.filter');
-const projects = document.querySelectorAll('.project-card');
-const filterStatus = document.querySelector('#filter-status');
-
-filters.forEach((filter) => {
-  // Keep the displayed counts consistent when projects are added or removed.
-  const category = filter.dataset.filter;
-  const count = [...projects].filter((project) => category === 'all' || project.dataset.category === category).length;
-  filter.querySelector('span').textContent = String(count).padStart(2, '0');
-
-  filter.addEventListener('click', () => {
-    filters.forEach((button) => {
-      const selected = button === filter;
-      button.classList.toggle('active', selected);
-      button.setAttribute('aria-pressed', String(selected));
-    });
-
-    projects.forEach((project) => {
-      project.hidden = category !== 'all' && project.dataset.category !== category;
-    });
-
-    filterStatus.textContent = `Showing ${count} ${count === 1 ? 'project' : 'projects'}.`;
+};
+let scheduled = false;
+window.addEventListener('scroll', () => {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(() => {
+    updateNavigation();
+    scheduled = false;
   });
-});
-
+}, { passive: true });
+window.addEventListener('resize', updateNavigation);
+updateNavigation();
 document.querySelector('#year').textContent = new Date().getFullYear();

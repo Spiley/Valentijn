@@ -1,25 +1,26 @@
 # Valentijn Keijser
 
-Personal portfolio at https://valentijnkeijser.nl, built with plain HTML, CSS, and JavaScript. No build step or package installation is required.
+Personal portfolio at https://valentijnkeijser.nl. Plain HTML, CSS and JavaScript; no framework or runtime dependency.
 
-## Design foundations
+## Design reference
 
-The portfolio and pentest case study follow [Vercel's Geist Design System](https://vercel.com/geist):
-- [Typography](https://vercel.com/geist/typography): Geist Sans for content and Geist Mono for dates, categories and technical metadata. Type sizes follow the 12/14/16/20/24/32/64 scale, with optical adjustments for headings.
-- [Colors](https://vercel.com/geist/colors): white and off-white surfaces, neutral text and borders, and a blue keyboard focus ring. Project screenshots supply the color.
-- [Grid](https://vercel.com/geist/grid): consistent alignment and responsive columns; lines separate sections without adding decorative grids.
-- Spacing uses multiples of 4px; controls and image frames use a restrained 6px radius.
+The current [Brittany Chiang portfolio](https://brittanychiang.com/) is the concrete visual reference: a persistent introduction column, a scrolling content column, Inter typography, slate surfaces, muted body text and compact project rows. This is an original static implementation of that layout direction with Valentijn's own content and assets. The footer credits the reference.
 
-The layout adapts those foundations to a personal portfolio. It does not use Vercel branding or an unofficial component library. No new runtime dependency is needed.
+Inter is self-hosted from the Fontsource variable Inter package (5.3.0). Its SIL Open Font License is in assets/fonts/Inter-LICENSE.txt.
 
-Geist Sans and Geist Mono are self-hosted WOFF2 files from the official geist@1.9.0 npm package. Their SIL Open Font License is included in assets/fonts/LICENSE.txt.
+## Editing and deployment
 
-## Local preview
+Edit index.html, pentest-tool.html, portfolio.css, project.css and portfolio.js. After editing CSS or JavaScript, run:
 
-Serve this directory with any static HTTP server, then open the local URL. For example:
+    node scripts/version-assets.mjs
+    node scripts/check-assets.mjs
+
+The versioning script writes content-hashed CSS and JavaScript into assets/css and assets/js, then updates both HTML pages. Commit the generated files together with the HTML. This prevents new HTML from loading an older browser/CDN-cached stylesheet. GitHub Pages serves the committed files directly; no build configuration is needed.
+
+Serve the repository root for a local preview:
 
     python -m http.server 4173 --bind 127.0.0.1
 
-Check index.html and pentest-tool.html at desktop and mobile widths. Verify project filters, mobile navigation, keyboard focus, earlier-experience expansion and internal links. All nine projects are shown when JavaScript is unavailable.
+Check both pages on desktop, tablet and mobile. The portfolio has nine projects with category filters, anchor navigation and expandable earlier work experience. All content remains readable without JavaScript.
 
-The spileyapps/ app catalogue and legal pages have their own styles. Deployment remains through the repository's existing GitHub Pages setup and CNAME.
+The spileyapps/ catalogue and legal pages retain their separate styles. The existing GitHub Pages deployment and CNAME remain in place.
