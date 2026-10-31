@@ -1,27 +1,27 @@
-.project-intro { padding-block: 85px 45px; }
+.project-intro { padding-block: 64px 40px; }
 .project-intro > .eyebrow { color: var(--muted); margin-bottom: 27px; }
-.project-intro h1 { font-size: clamp(3rem, 6.5vw, 5.6rem); letter-spacing: -.055em; line-height: 1.07; }
-.project-intro h1 em { color: var(--accent); }
+.project-intro h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.055em; line-height: 1.07; }
+
 .project-summary { color: var(--muted); font-size: 1.1rem; max-width: 630px; margin-top: 27px; }
 .project-facts { display: flex; gap: 70px; padding-top: 32px; margin: 37px 0 0; border-top: 1px solid var(--border); }
 .project-facts dt { font-family: var(--mono); color: var(--muted); font-size: .62rem; letter-spacing: .08em; }
 .project-facts dd { font-size: .86rem; margin: 8px 0 0; }
-.project-cover { border: 1px solid var(--border); border-radius: 7px; overflow: hidden; background: #14283b; }
+.project-cover { border: 1px solid var(--border); border-radius: 7px; overflow: hidden; background: var(--surface); }
 .project-cover .preview-bar { padding: 17px 20px; }
 .project-cover > img { width: 100%; height: auto; }
 .project-cover figcaption, .case-figure figcaption { color: var(--muted); font-size: .72rem; padding: 14px 19px; }
-.case-study { display: grid; grid-template-columns: minmax(0, 780px) minmax(0, 260px); gap: 90px; padding-block: 85px 100px; }
+.case-study { display: grid; grid-template-columns: minmax(0, 780px) minmax(0, 260px); gap: 64px; padding-block: 64px 80px; }
 .case-content { min-width: 0; }
 .case-content section + section { margin-top: 57px; }
 .case-content section > .eyebrow { color: var(--muted); margin-bottom: 17px; }
 .case-content h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); }
 .case-content section > p:not(.eyebrow) { color: var(--muted); font-size: .96rem; margin-top: 23px; }
-.case-content code { color: #c7e7f5; font-size: .85em; background: #1c3349; padding: 2px 5px; border-radius: 3px; }
+.case-content code { color: var(--text); font-size: .85em; background: var(--surface-hover); padding: 2px 5px; border-radius: 3px; }
 .case-content .button { margin-top: 30px; }
 .case-figure { margin: 40px 0 55px; border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
 .case-figure img { width: 100%; height: auto; }
 .workflow-steps { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.workflow-steps li { display: flex; gap: 15px; padding: 23px 20px; background: #142538; border: 1px solid #304b65; border-radius: 5px; }
+.workflow-steps li { display: flex; gap: 15px; padding: 23px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 5px; }
 .workflow-steps li > span { font-family: var(--mono); font-size: .65rem; color: var(--accent); padding-top: 3px; }
 .workflow-steps h3 { font-size: .94rem; }
 .workflow-steps p { color: var(--muted); font-size: .78rem; margin-top: 8px; }
